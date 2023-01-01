@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { GET_CONTRIBUTIONS } from "./logic/github";
+import { GET_CONTRIBUTIONS } from "../logic/github";
 
 export function DisplayStats({
   userName,

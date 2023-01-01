@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
-import { TokenField } from "./TokenField";
+import { TokenField } from "./components/TokenField";
 import CssBaseline from "@mui/material/CssBaseline";
+import { AppBar } from "@mui/material";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <React.Fragment>
         <CssBaseline />
         <TokenField />
+
       </React.Fragment>
     </div>
   );
