@@ -1,9 +1,8 @@
-import {
-  gql,
-  request,
-} from "https://deno.land/x/graphql_request@v4.1.0/mod.ts";
-
 export interface Contributions {
+  data: GraphQLData;
+}
+
+export interface GraphQLData {
   user: User;
 }
 
@@ -37,21 +36,28 @@ export async function fetchContribution(
     token: string;
   },
 ) {
-  return await request<Contributions>(
+  const result = await fetch(
     "https://api.github.com/graphql",
-    query,
     {
-      userName: userName,
-      from: from,
-      to: to,
-    },
-    {
-      Authorization: `Bearer ${token}`,
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      method: "POST",
+      body: JSON.stringify({
+        query: query,
+        variables: {
+          userName: userName,
+          from: from,
+          to: to,
+        },
+      }),
     },
   );
+
+  return await result.json() as Contributions;
 }
 
-const query = gql`
+const query = `
   query($userName:String!,$from:DateTime!, $to:DateTime!) {
     user(login: $userName){
       contributionsCollection(from: $from, to: $to) {
