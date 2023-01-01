@@ -1,4 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
+import Chart from "../islands/Chart.tsx";
 import Counter from "../islands/Counter.tsx";
 
 export default function Home() {
@@ -18,6 +19,12 @@ export default function Home() {
           ./routes/index.tsx file, and refresh.
         </p>
         <Counter start={3} />
+        <Chart
+          userName="koji-1009"
+          from="2021-01-01T00:00:00Z"
+          to="2022-01-01T00:00:00Z"
+          token=""
+        />
       </div>
     </>
   );
