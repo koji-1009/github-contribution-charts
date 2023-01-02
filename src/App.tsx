@@ -1,22 +1,33 @@
 import React from "react";
-import "./App.css";
 import { TokenField } from "./components/TokenField";
 import CssBaseline from "@mui/material/CssBaseline";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { Contributions } from "./components/Contributions";
+import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 
 function App() {
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode: prefersDarkMode ? "dark" : "light",
+        },
+      }),
+    [prefersDarkMode]
+  );
+
   return (
-    <div className="App">
-      <React.Fragment>
-        <LocalizationProvider dateAdapter={AdapterDateFns}>
+    <React.Fragment>
+      <LocalizationProvider dateAdapter={AdapterDateFns}>
+        <ThemeProvider theme={theme}>
           <CssBaseline />
           <Contributions />
           <TokenField />
-        </LocalizationProvider>
-      </React.Fragment>
-    </div>
+        </ThemeProvider>
+      </LocalizationProvider>
+    </React.Fragment>
   );
 }
 
