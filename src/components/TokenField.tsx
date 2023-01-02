@@ -1,30 +1,48 @@
-import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
+import {
+  Box,
+  FormControl,
+  Grid,
+  IconButton,
+  Input,
+  InputAdornment,
+  Typography,
+} from "@mui/material";
+import SaveIcon from "@mui/icons-material/Save";
 
 export function TokenField() {
   const [token, setToken] = useState(localStorage.getItem("token") ?? "");
 
   return (
     <Box>
-      <p>
-        Personal Access Token
-        <input
-          type="text"
-          value={token}
-          onChange={(e) => {
-            setToken(e.target.value);
-          }}
-        />
-      </p>
-      <TextField></TextField>
-      <Button
-        variant="outlined"
-        onClick={() => {
-          localStorage.setItem("token", token);
-        }}
-      >
-        Save
-      </Button>
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
+          <Typography>Personal Access Token</Typography>
+        </Grid>
+        <Grid item xs={8}>
+          <FormControl fullWidth variant="standard">
+            <Input
+              type="standard"
+              value={token}
+              onChange={(e) => {
+                setToken(e.target.value);
+              }}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    onClick={() => {
+                      localStorage.setItem("token", token);
+                    }}
+                    edge="end"
+                  >
+                    <SaveIcon />
+                  </IconButton>
+                </InputAdornment>
+              }
+            />
+          </FormControl>
+        </Grid>
+      </Grid>
     </Box>
   );
 }

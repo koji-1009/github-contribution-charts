@@ -13,8 +13,8 @@ function App() {
         <CssBaseline />
         <TopAppBar />
         <RootBody>
-          <Contributions />
           <TokenField />
+          <Contributions />
         </RootBody>
       </LocalizationProvider>
     </>
