@@ -5,9 +5,7 @@ import { Box, TextField } from "@mui/material";
 import { formatISO, subYears } from "date-fns";
 
 export function Contributions() {
-  const [to, setTo] = useState(new Date(2014, 1, 11));
-  const value = formatISO(to);
-  console.log(value);
+  const [to, setTo] = useState(new Date(2022, 1, 1));
 
   return (
     <Box>

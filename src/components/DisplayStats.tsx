@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { Box } from "@mui/material";
 import { GET_CONTRIBUTIONS } from "../logic/github";
+import { ContributionGraph } from "./ContributionGraph";
 
 export function DisplayStats({
   userName,
@@ -25,12 +26,13 @@ export function DisplayStats({
   return (
     <Box>
       <p>
-        pass{" "}
+        Total contributions{" "}
         {
           data?.user?.contributionsCollection.contributionCalendar
             .totalContributions
         }
       </p>
+      <ContributionGraph />
     </Box>
   );
 }
