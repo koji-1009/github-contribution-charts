@@ -1,10 +1,11 @@
+import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
 
 export function TokenField() {
   const [token, setToken] = useState(localStorage.getItem("token") ?? "");
 
   return (
-    <div>
+    <Box>
       <p>
         Personal Access Token
         <input
@@ -15,13 +16,15 @@ export function TokenField() {
           }}
         />
       </p>
-      <button
+      <TextField></TextField>
+      <Button
+        variant="outlined"
         onClick={() => {
           localStorage.setItem("token", token);
         }}
       >
         Save
-      </button>
-    </div>
+      </Button>
+    </Box>
   );
 }

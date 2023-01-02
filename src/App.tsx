@@ -6,6 +6,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { Contributions } from "./components/Contributions";
 import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
 import { TopAppBar } from "./components/TopAppBar";
+import { RootBody } from "./components/RootBody";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -25,8 +26,10 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <TopAppBar />
-          <Contributions />
-          <TokenField />
+          <RootBody>
+            <Contributions />
+            <TokenField />
+          </RootBody>
         </ThemeProvider>
       </LocalizationProvider>
     </React.Fragment>

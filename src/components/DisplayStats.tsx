@@ -1,4 +1,5 @@
 import { useQuery } from "@apollo/client";
+import { Box } from "@mui/material";
 import { GET_CONTRIBUTIONS } from "../logic/github";
 
 export function DisplayStats({
@@ -22,12 +23,14 @@ export function DisplayStats({
   if (error) return <p>Error : {error.message}</p>;
 
   return (
-    <p>
-      pass{" "}
-      {
-        data?.user?.contributionsCollection.contributionCalendar
-          .totalContributions
-      }
-    </p>
+    <Box>
+      <p>
+        pass{" "}
+        {
+          data?.user?.contributionsCollection.contributionCalendar
+            .totalContributions
+        }
+      </p>
+    </Box>
   );
 }

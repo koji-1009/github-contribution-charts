@@ -1,28 +1,31 @@
 import { useState } from "react";
 import { DisplayStats } from "./DisplayStats";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import { TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
+import { formatISO, subYears } from "date-fns";
 
 export function Contributions() {
-  const [from, setFrom] = useState(new Date(2014, 1, 11));
+  const [to, setTo] = useState(new Date(2014, 1, 11));
+  const value = formatISO(to);
+  console.log(value);
 
   return (
-    <div>
+    <Box>
       <DesktopDatePicker
         label="Date desktop"
-        value={from}
+        value={to}
         onChange={(newValue: Date | null) => {
           if (newValue) {
-            setFrom(newValue);
+            setTo(newValue);
           }
         }}
         renderInput={(params) => <TextField {...params} />}
       />
       <DisplayStats
         userName={"koji-1009"}
-        from={"2021-01-01T00:00:00Z"}
-        to={"2022-01-01T00:00:00Z"}
+        from={formatISO(subYears(to, 1))}
+        to={formatISO(to)}
       />
-    </div>
+    </Box>
   );
 }
