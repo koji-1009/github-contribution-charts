@@ -21,23 +21,22 @@ ChartJS.register(
   Legend
 );
 
-export function ContributionGraph() {
+export function ContributionGraph(props: {
+  labels: Array<string>;
+  data: Array<{
+    label: string;
+    data: Array<number>;
+    borderColor: string;
+    backgroundColor: string;
+  }>;
+}) {
   return (
     <Box>
       <Line
         datasetIdKey="id"
         data={{
-          labels: ["Jun", "Jul", "Aug"],
-          datasets: [
-            {
-              label: "",
-              data: [5, 6, 7],
-            },
-            {
-              label: "",
-              data: [3, 2, 1],
-            },
-          ],
+          labels: props.labels,
+          datasets: props.data,
         }}
       />
     </Box>
