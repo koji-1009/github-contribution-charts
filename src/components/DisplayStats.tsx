@@ -21,5 +21,13 @@ export function DisplayStats({
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  return <p>pass {data?.user?.contributionsCollection.contributionCalendar.totalContributions}</p>;
+  return (
+    <p>
+      pass{" "}
+      {
+        data?.user?.contributionsCollection.contributionCalendar
+          .totalContributions
+      }
+    </p>
+  );
 }

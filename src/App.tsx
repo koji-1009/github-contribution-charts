@@ -5,6 +5,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { Contributions } from "./components/Contributions";
 import { createTheme, ThemeProvider, useMediaQuery } from "@mui/material";
+import { TopAppBar } from "./components/TopAppBar";
 
 function App() {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -23,6 +24,7 @@ function App() {
       <LocalizationProvider dateAdapter={AdapterDateFns}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
+          <TopAppBar />
           <Contributions />
           <TokenField />
         </ThemeProvider>
