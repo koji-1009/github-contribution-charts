@@ -20,7 +20,7 @@ export function TokenField() {
           <Typography>Personal Access Token</Typography>
         </Grid>
         <Grid item xs={8}>
-          <FormControl fullWidth variant="standard">
+          <FormControl variant="standard">
             <Input
               type="standard"
               value={token}
