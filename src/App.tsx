@@ -2,7 +2,8 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { Contributions } from "./components/Contributions";
 import { TopAppBar } from "./components/TopAppBar";
-import { styled, CssBaseline } from "@mui/material";
+import { CssBaseline } from "@mui/material";
+import { RootBody } from "./components/RootBody";
 
 function App() {
   return (
@@ -17,9 +18,5 @@ function App() {
     </>
   );
 }
-
-const RootBody = styled("div")(({ theme }) => ({
-  padding: theme.spacing(2),
-}));
 
 export default App;
