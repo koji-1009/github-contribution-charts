@@ -2,6 +2,7 @@
   "name": "github-contribution-charts",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://koji-1009.github.io/github-contribution-charts",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
