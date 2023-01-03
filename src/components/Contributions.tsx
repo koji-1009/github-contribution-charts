@@ -37,7 +37,7 @@ export function Contributions() {
   return (
     <Box>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Grid container spacing={2}>
+        <Grid container spacing={2}  alignItems={'center'} >
           <Grid item xs={6}>
             <Controller
               name="to"
@@ -49,7 +49,7 @@ export function Contributions() {
                   minDate={new Date(2000, 1, 1)}
                   maxDate={new Date()}
                   renderInput={(params) => (
-                    <TextField {...params} helperText={null} />
+                    <TextField fullWidth {...params} helperText={null} />
                   )}
                   {...field}
                 />
@@ -61,21 +61,21 @@ export function Contributions() {
               name="username"
               control={control}
               render={({ field }) => (
-                <TextField label="GitHub username" {...field} />
+                <TextField fullWidth label="GitHub username" {...field} />
               )}
             />
           </Grid>
-          <Grid item xs={12}>
+          <Grid item xs={10}>
             <Controller
               name="token"
               control={control}
               render={({ field }) => (
-                <TextField label="GitHub PAT" {...field} />
+                <TextField type={"password"} fullWidth label="GitHub Personal Access Token" {...field} />
               )}
             />
           </Grid>
-          <Grid item xs={12}>
-            <Button variant="outlined" type="submit">
+          <Grid item xs={2}>
+            <Button fullWidth variant="outlined" type="submit">
               Request
             </Button>
           </Grid>
