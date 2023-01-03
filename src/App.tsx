@@ -1,4 +1,3 @@
-import { TokenField } from "./components/TokenField";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { Contributions } from "./components/Contributions";
@@ -12,7 +11,6 @@ function App() {
         <CssBaseline />
         <TopAppBar />
         <RootBody>
-          <TokenField />
           <Contributions />
         </RootBody>
       </LocalizationProvider>
