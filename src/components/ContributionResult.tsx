@@ -1,5 +1,5 @@
 import { useQuery } from "@apollo/client";
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import { formatISO, subYears } from "date-fns";
 import { GET_CONTRIBUTIONS } from "../logic/github";
 import { convert } from "../util/Converters";
@@ -44,30 +44,42 @@ export function ContributionResult({
   };
 
   return (
-    <Box>
-      <Typography>
-        Current total contributions {previousCollection.totalContributions}
-      </Typography>
-      <Typography>
-        Previous total contributions {currentCollection.totalContributions}
-      </Typography>
-      <ContributionGraph
-        labels={currentCollection.labels}
-        data={[
-          {
-            label: "current",
-            data: currentCollection.numbers,
-            borderColor: "#36A2EB",
-            backgroundColor: "#9BD0F5",
-          },
-          {
-            label: "previous",
-            data: previousCollection.numbers,
-            borderColor: "#FF6384",
-            backgroundColor: "#FFB1C1",
-          },
-        ]}
-      />
+    <Box paddingY={2}>
+      <Grid container alignItems={"center"} textAlign={"center"}>
+        <Grid item xs>
+          <Typography>
+            {currentCollection.labels[0]}~
+            {currentCollection.labels[currentCollection.labels.length - 1]} :
+            {currentCollection.totalContributions}
+          </Typography>
+        </Grid>
+        <Grid item xs>
+          <Typography>
+            {previousCollection.labels[0]}~
+            {previousCollection.labels[previousCollection.labels.length - 1]} :
+            {previousCollection.totalContributions}
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <ContributionGraph
+            labels={currentCollection.labels}
+            data={[
+              {
+                label: currentCollection.labels[0],
+                data: currentCollection.numbers,
+                borderColor: "#36A2EB",
+                backgroundColor: "#9BD0F5",
+              },
+              {
+                label: previousCollection.labels[0],
+                data: previousCollection.numbers,
+                borderColor: "#FF6384",
+                backgroundColor: "#FFB1C1",
+              },
+            ]}
+          />
+        </Grid>
+      </Grid>
     </Box>
   );
 }
