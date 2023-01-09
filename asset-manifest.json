@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/github-contribution-charts/static/css/main.e6c13ad2.css",
-    "main.js": "/github-contribution-charts/static/js/main.1a2d49d6.js",
+    "main.js": "/github-contribution-charts/static/js/main.d476b3f4.js",
     "static/js/496.881db94e.chunk.js": "/github-contribution-charts/static/js/496.881db94e.chunk.js",
     "index.html": "/github-contribution-charts/index.html",
     "main.e6c13ad2.css.map": "/github-contribution-charts/static/css/main.e6c13ad2.css.map",
-    "main.1a2d49d6.js.map": "/github-contribution-charts/static/js/main.1a2d49d6.js.map",
+    "main.d476b3f4.js.map": "/github-contribution-charts/static/js/main.d476b3f4.js.map",
     "496.881db94e.chunk.js.map": "/github-contribution-charts/static/js/496.881db94e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.1a2d49d6.js"
+    "static/js/main.d476b3f4.js"
   ]
 }
