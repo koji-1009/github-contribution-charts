@@ -10,7 +10,7 @@
     "eject": "react-scripts eject",
     "compile": "graphql-codegen",
     "watch": "graphql-codegen -w",
-    "lint": "eslint src/**/*.tsx && prettier --write ."
+    "lint": "eslint src/**/*.tsx src/**/*.ts && prettier --write ."
   },
   "dependencies": {
     "@apollo/client": "^3.7.3",

@@ -37,7 +37,7 @@ export function Contributions() {
   return (
     <Box>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Grid container spacing={2}  alignItems={'center'} >
+        <Grid container spacing={2} alignItems={"center"}>
           <Grid item xs={6}>
             <Controller
               name="to"
@@ -70,7 +70,12 @@ export function Contributions() {
               name="token"
               control={control}
               render={({ field }) => (
-                <TextField type={"password"} fullWidth label="GitHub Personal Access Token" {...field} />
+                <TextField
+                  type={"password"}
+                  fullWidth
+                  label="GitHub Personal Access Token"
+                  {...field}
+                />
               )}
             />
           </Grid>
