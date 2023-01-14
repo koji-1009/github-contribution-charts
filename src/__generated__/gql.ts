@@ -27,7 +27,7 @@ const documents = {
  *
  * The query argument is unknown!
  * Please regenerate the types.
-**/
+ */
 export function gql(source: string): unknown;
 
 /**
