@@ -30,7 +30,7 @@
     "web-vitals": "^3.1.0"
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.16.3",
+    "@graphql-codegen/cli": "^3.0.0",
     "@graphql-codegen/client-preset": "^1.2.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
