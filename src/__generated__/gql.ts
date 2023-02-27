@@ -10,7 +10,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * 2. It is not minifiable, so the string of a GraphQL query will be multiple times inside the bundle.
  * 3. It does not support dead code elimination, so it will add unused operations.
  *
- * Therefore it is highly recommended to use the babel-plugin for production.
+ * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
     "\n  query Contributions($userName: String!, $from: DateTime!, $to: DateTime!) {\n    user(login: $userName) {\n      contributionsCollection(from: $from, to: $to) {\n        contributionCalendar {\n          totalContributions\n          weeks {\n            contributionDays {\n              contributionCount\n              date\n            }\n          }\n        }\n      }\n    }\n  }\n": types.ContributionsDocument,
