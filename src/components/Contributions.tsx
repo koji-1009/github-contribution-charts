@@ -48,9 +48,13 @@ export function Contributions() {
                   label="Year and Month"
                   minDate={new Date(2000, 1, 1)}
                   maxDate={new Date()}
-                  renderInput={(params) => (
-                    <TextField fullWidth {...params} helperText={null} />
-                  )}
+                  slotProps={{
+                    textField: {
+                      fullWidth: true,
+                      helperText: null,
+                    },
+                  }}
+                  slots
                   {...field}
                 />
               )}
