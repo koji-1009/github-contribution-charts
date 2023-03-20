@@ -41,7 +41,7 @@
     "@types/react-dom": "^18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
     "@typescript-eslint/parser": "^5.50.0",
-    "eslint": "^8.35.0",
+    "eslint": "^8.36.0",
     "eslint-plugin-react": "^7.32.2",
     "react-scripts": "5.0.1",
     "prettier": "2.8.4",
