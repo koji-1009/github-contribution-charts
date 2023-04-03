@@ -13,7 +13,7 @@
     "lint": "eslint src/**/*.tsx src/**/*.ts && prettier --write ."
   },
   "dependencies": {
-    "@apollo/client": "^3.7.10",
+    "@apollo/client": "^3.7.11",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.6",
     "@fontsource/roboto": "^4.5.8",
