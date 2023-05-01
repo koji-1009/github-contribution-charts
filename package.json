@@ -19,7 +19,7 @@
     "@fontsource/roboto": "^4.5.8",
     "@mui/icons-material": "^5.11.9",
     "@mui/material": "^5.11.10",
-    "@mui/x-date-pickers": "^6.0.4",
+    "@mui/x-date-pickers": "^6.3.0",
     "chart.js": "^4.2.1",
     "date-fns": "^2.29.3",
     "graphql": "^16.6.0",
