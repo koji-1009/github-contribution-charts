@@ -48,6 +48,10 @@ export function Contributions() {
                   label="Year and Month"
                   minDate={new Date(2000, 1, 1)}
                   maxDate={new Date()}
+                  onChange={(date) => {
+                    if (date != null) field.onChange(date);
+                  }}
+                  value={field.value}
                   slotProps={{
                     textField: {
                       fullWidth: true,
@@ -55,7 +59,6 @@ export function Contributions() {
                     },
                   }}
                   slots
-                  {...field}
                 />
               )}
             />
