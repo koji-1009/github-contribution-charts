@@ -17,7 +17,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.10.0",
     "@fontsource/roboto": "^5.0.0",
-    "@mui/icons-material": "^5.14.7",
+    "@mui/icons-material": "^5.14.14",
     "@mui/material": "^5.14.3",
     "@mui/x-date-pickers": "^6.16.2",
     "chart.js": "^4.4.0",
